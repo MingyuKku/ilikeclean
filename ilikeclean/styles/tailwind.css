@@ -1,0 +1,145 @@
+@import url('./reset.css');
+@import url('./tailwindAnimation.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	/*텍스트*/
+
+	.campton-1 {
+		@apply font-campton text-[2.5rem] font-extrabold leading-[1.5];
+	}
+
+	.campton-2 {
+		@apply font-campton text-[2rem] font-bold leading-[1.5];
+	}
+
+	.campton-3 {
+		@apply font-campton text-[1.25rem] font-bold leading-[1.5];
+	}
+
+	.campton-4 {
+		@apply font-campton text-[1rem] font-semibold leading-[1.5];
+	}
+
+	.campton-5 {
+		@apply font-campton text-[0.875rem] font-semibold leading-[1.5];
+	}
+
+	.campton-6 {
+		@apply font-campton text-[0.813rem] font-semibold leading-[1.5];
+	}
+
+	.campton-7 {
+		@apply font-campton text-[0.75rem] font-medium leading-[1.5];
+	}
+
+	.head-1 {
+		@apply text-[3rem] font-bold leading-[1.5];
+	}
+
+	.head-2 {
+		@apply text-[1.5rem] font-bold leading-[1.5];
+	}
+
+	.head-3 {
+		@apply text-[1.25rem] font-bold leading-[1.5];
+	}
+
+	.head-4 {
+		@apply text-[1rem] font-bold leading-[1.5];
+	}
+
+	.head-5 {
+		@apply text-[0.875rem] font-bold leading-[1.5];
+	}
+
+	.head-6 {
+		@apply text-[0.75rem] font-bold leading-[1.5];
+	}
+
+	.sub-t-1 {
+		@apply text-[1.25rem] font-normal leading-[1.5];
+	}
+
+	.sub-t-2 {
+		@apply text-[1.125rem] font-normal leading-[1.5];
+	}
+
+	.sub-t-3 {
+		@apply text-[1rem] font-normal leading-[1.5];
+	}
+
+	.sub-t-4 {
+		@apply text-[0.875rem] font-normal leading-[1.5];
+	}
+
+	.sub-t-5 {
+		@apply text-[0.75rem] font-normal leading-[1.5];
+	}
+
+	.body-1 {
+		@apply text-[1rem] font-normal leading-[2];
+	}
+
+	.body-2 {
+		@apply text-[0.875rem] font-normal leading-[2];
+	}
+
+	.button-1-text {
+		@apply text-[1rem] font-bold leading-[1.5] tracking-[0.02rem];
+	}
+
+	.button-2-text {
+		@apply text-[0.875rem] font-bold leading-[1.5] tracking-[0.02rem];
+	}
+
+	.button-3-text {
+		@apply text-[0.75rem] font-bold leading-[1.5] tracking-[0.02rem];
+	}
+
+	.caption-text {
+		@apply text-[0.75rem] font-medium leading-[1.5];
+	}
+
+	.etc-overline-text {
+		@apply text-[0.625rem] font-medium leading-[1.5];
+	}
+}
+
+@layer components {
+	/*페이지 레이아웃*/
+	.page-layout {
+		@apply mx-auto w-full max-w-desktop pt-header-desktop;
+		@apply mobile:px-5 mobile:pt-header-mobile;
+	}
+
+	/*인풋(input)*/
+	.none-st {
+		@apply appearance-none bg-transparent bg-none outline-none;
+	}
+	.input-solid-st {
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.5;
+		@apply appearance-none bg-transparent bg-none outline-none;
+		@apply block h-12 w-full rounded-sm border border-achromatic-300 bg-bg px-4 text-text-p placeholder-achromatic-500;
+		@apply focus:border-achromatic-900 focus:placeholder-opacity-0;
+	}
+	.sr-only {
+		@apply absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0;
+	}
+
+	/* 트랜스폼 */
+	.xy-center {
+		@apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+	}
+	.x-center {
+		@apply left-1/2 -translate-x-1/2;
+	}
+	.y-center {
+		@apply top-1/2 -translate-y-1/2;
+	}
+}

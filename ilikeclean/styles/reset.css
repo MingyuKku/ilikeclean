@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*li {*/
+/*    list-style: none;*/
+/*}*/
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+i {
+	font-style: normal;
+}
+
+em {
+	font-style: normal;
+}
+
+input,
+button,
+select,
+option,
+textarea {
+	font-size: 16px;
+	font-family: 'Pretendard', sans-serif;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-border-radius: 0;
+	/* border: none; */
+}
+
+input::placeholder,
+button::placeholder,
+select::placeholder,
+option::placeholder,
+textarea::placeholder {
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit;
+	font-family: 'Pretendard', sans-serif;
+}
+
+img {
+	display: block;
+	width: 100%;
+	font-size: 0;
+	border: none;
+}
+
+svg {
+	/*shape-rendering: crispEdges; !* 픽셀 그리드에 맞춤 *!*/
+	/*transform: translateZ(0); !* GPU 가속 강제 적용 *!*/
+}
+
+.clearFix::after,
+.clearFix::before {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+html body {
+	width: 100%;
+	font-family: 'Pretendard', sans-serif;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+}

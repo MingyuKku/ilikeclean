@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
+
+const PRODUCTION = 'production'
+const isDev = process.env.NODE_ENV !== PRODUCTION
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+	reactStrictMode: false,
+	output: 'standalone',
+	productionBrowserSourceMaps: isDev,
+}
 
-export default nextConfig;
+export default nextConfig

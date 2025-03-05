@@ -1,0 +1,25 @@
+.toast-animation {
+	animation: toastAnimation 0.3s forwards cubic-bezier(0.4, 1.72, 1, 1);
+}
+
+@keyframes toastAnimation {
+	0% {
+		transform: translate3d(-50%, 0, 0);
+	}
+	100% {
+		transform: translate3d(-50%, -40px, 0);
+	}
+}
+
+.opacity-animation {
+	animation: opacityAnimation 0.35s forwards ease-in-out;
+}
+
+@keyframes opacityAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1
+	}
+}
