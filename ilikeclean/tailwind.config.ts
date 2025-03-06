@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 
-import { DesktopWidth, MobileWidth } from './constants/ui'
+import { DesktopHeaderHeight, DesktopWidth, MobileHeaderHeight, MobileWidth } from './constants/ui'
 
 export default {
 	content: [
@@ -95,32 +95,32 @@ export default {
 				mobile: `${MobileWidth}px`,
 			},
 			height: {
-				'header-desktop': '90px',
-				'header-mobile': '48px',
+				'header-desktop': `${DesktopHeaderHeight}px`,
+				'header-mobile': `${MobileHeaderHeight}px`,
 				'bottom-gnb': '56px',
 				viewScreen: 'calc(var(--vh,1vh)*100)',
 				'viewScreen-mobile': 'calc(var(--vh,1vh)*100 + 1px)',
-				'viewScreen-header-desktop': 'calc(var(--vh,1vh)*100 - 90px)',
-				'viewScreen-header-mobile': 'calc(var(--vh,1vh)*100 - 48px)',
+				'viewScreen-header-desktop': `calc(var(--vh,1vh)*100 - ${DesktopHeaderHeight}px)`,
+				'viewScreen-header-mobile': `calc(var(--vh,1vh)*100 - ${MobileHeaderHeight}px)`,
 				'viewScreen-bottom-gnb': 'calc(var(--vh,1vh)*100 - 56px)',
 			},
 			minHeight: {
 				viewScreen: 'calc(var(--vh,1vh)*100)',
-				'viewScreen-header-desktop': 'calc(var(--vh,1vh)*100 - 90px)',
-				'viewScreen-header-mobile': 'calc(var(--vh,1vh)*100 - 48px)',
+				'viewScreen-header-desktop': `calc(var(--vh,1vh)*100 - ${DesktopHeaderHeight}px)`,
+				'viewScreen-header-mobile': `calc(var(--vh,1vh)*100 - ${MobileHeaderHeight}px)`,
 			},
 			maxHeight: {
 				viewScreen: 'calc(var(--vh,1vh)*100)',
 			},
 			padding: {
-				'header-desktop': '90px',
-				'header-mobile': '48px',
+				'header-desktop': `${DesktopHeaderHeight}px`,
+				'header-mobile': `${MobileHeaderHeight}px`,
 				'side-mobile': '20px',
 				'bottom-gnb': '56px',
 			},
 			inset: {
-				'header-desktop': '90px',
-				'header-mobile': '48px',
+				'header-desktop': `${DesktopHeaderHeight}px`,
+				'header-mobile': `${MobileHeaderHeight}px`,
 			},
 			spacing: {
 				'main-header': '60px',

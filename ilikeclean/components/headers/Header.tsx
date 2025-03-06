@@ -1,18 +1,39 @@
+'use client'
+
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 import ButtonSolid from '@/components/buttons/ButtonSolid'
-import { UiSize } from '@/constants/ui'
+import { DesktopHeaderHeight, UiSize } from '@/constants/ui'
 
 const Header = () => {
 	const Menu = ['메뉴 1', '메뉴 2', '메뉴 3']
+
+	const [isActive, setIsActive] = useState<boolean>(false)
+
+	useEffect(() => {
+		const windowScrollHandler = () => {
+			setIsActive(window.scrollY >= DesktopHeaderHeight)
+		}
+
+		window.addEventListener('scroll', windowScrollHandler)
+
+		return () => {
+			window.removeEventListener('scroll', windowScrollHandler)
+		}
+	}, [])
 
 	return (
 		<header
 			className={[
 				'fixed left-0 top-0 z-40 h-header-desktop w-full',
-				'flex justify-center border-b border-achromatic-500',
-			].ClassList()}>
-			<div className="inner flex h-full w-full max-w-desktop items-center justify-between text-achromatic-100">
+				'flex justify-center border-b',
+				'transition-background duration-500 ease-in-out',
+				isActive
+					? 'border-achromatic-0 bg-achromatic-0 text-achromatic-900'
+					: 'border-achromatic-500 bg-transparent text-achromatic-100',
+			].join(' ')}>
+			<div className="inner flex h-full w-full max-w-desktop items-center justify-between">
 				<div className="left flex shrink-0 items-center">
 					<div className="mr-2 w-[54px]">
 						<Image src="/images/bi-large.png" width={54} height={54} alt="bi" />

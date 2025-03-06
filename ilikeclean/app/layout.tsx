@@ -2,6 +2,7 @@ import '@/utils/index'
 import '@/styles/tailwind.css'
 
 import type { Metadata } from 'next'
+import React from 'react'
 
 import Header from '@/components/headers/Header'
 import { pretendard } from '@/fonts'
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={[pretendard.variable].ClassList()}>
+			<body className={[pretendard.variable].join(' ')}>
 				<Header />
 				<main>{children}</main>
 			</body>
