@@ -1,3 +1,5 @@
+import SectionTitle from '@/components/texts/SectionTitle'
+
 const Section1 = () => {
 	const problems = [
 		{
@@ -27,13 +29,20 @@ const Section1 = () => {
 	]
 
 	return (
-		<div className={'mx-auto max-w-desktop py-24'}>
-			<div className="title text-center">
-				<h2 className={'head-2 mb-8 text-achromatic-500'}>청소를 맡겨야 하는디...</h2>
-				<h1 className={'head-1'}>아직도 요런 문제들로 인해</h1>
-				<h1 className={'head-1 text-primary-300'}>업체 선택을 못하고 있는 당신을 위해!</h1>
-			</div>
-			<div className={'mt-20 grid grid-cols-2 gap-8'}>
+		<div className={'mx-auto max-w-desktop py-28 mobile:py-12'}>
+			<SectionTitle
+				subTitle={'청소를 맡겨야 하는디...'}
+				title={[
+					{
+						text: '아직도 요런 문제들로 인해',
+					},
+					{
+						text: '업체 선택을 못하고 있는 당신을 위해!',
+						isHighlighted: true,
+					},
+				]}
+			/>
+			<div className={['mt-20 grid grid-cols-2 gap-8', 'mobile:mt-10 mobile:block mobile:px-4'].join(' ')}>
 				{problems.map((problem, idx) => (
 					<div
 						key={idx}
@@ -41,18 +50,21 @@ const Section1 = () => {
 							'rounded-3xl border border-achromatic-500 p-10 text-center',
 							'transition-background',
 							'bg-achromatic-0 hover:bg-achromatic-100',
+							'mobile:mb-4 mobile:p-6 mobile:last:mb-0',
 						].join(' ')}>
-						<h3 className={'head-2 mb-5'}>{problem.title}</h3>
+						<h3 className={'head-2 mobile:head-3 mb-5'}>{problem.title}</h3>
 						{problem.description.map((desc, i) => (
-							<p key={i} className={'sub-t-1'}>
+							<p key={i} className={'sub-t-1 mobile:sub-t-2'}>
 								{desc}
 							</p>
 						))}
 					</div>
 				))}
 			</div>
-			<div className={'mt-20 text-center'}>
-				<h1 className={'head-2 !text-[34px] text-primary-300'}>이런 고민들로부터 이제 해방될 수 있습니다!</h1>
+			<div className={'mt-20 text-center mobile:mt-10'}>
+				<h1 className={'head-2 !text-[34px] text-primary-300 mobile:!text-[20px]'}>
+					이런 고민들로부터 이제 해방될 수 있습니다!
+				</h1>
 			</div>
 		</div>
 	)

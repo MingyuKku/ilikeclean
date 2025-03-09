@@ -1,7 +1,7 @@
-export const DesktopWidth = 1200
+export const DesktopWidth = 1248
 export const MobileWidth = 768
 export const DesktopHeaderHeight = 90
-export const MobileHeaderHeight = 48
+export const MobileHeaderHeight = 56
 
 export const UiSize = {
 	ExtraLarge: 'xl',

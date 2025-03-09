@@ -14,10 +14,6 @@ declare global {
 	interface Number {
 		zf(len: number): string
 	}
-
-	interface Array<T> {
-		ClassList(): string
-	}
 }
 
 export {}

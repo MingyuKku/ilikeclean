@@ -1,4 +1,4 @@
-import './array'
+export * from './device'
 
 /**
  * body 스크롤 막기

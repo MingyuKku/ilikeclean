@@ -13,7 +13,7 @@ const ButtonSolid: FC<Props> = props => {
 	const getClassNames = (size: UiSizeType): HTMLAttributes<HTMLButtonElement>['className'] => {
 		switch (size) {
 			case UiSize.ExtraLarge:
-				return 'h-14 rounded-sm button-1-text'
+				return 'h-[64px] rounded-sm sub-t-1'
 			case UiSize.Large:
 				return 'h-12 rounded-sm button-1-text'
 			case UiSize.Middle:

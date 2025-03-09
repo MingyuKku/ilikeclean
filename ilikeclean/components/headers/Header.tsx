@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 import ButtonSolid from '@/components/buttons/ButtonSolid'
+import MobileMenu from '@/components/headers/MobileMenu'
 import { DesktopHeaderHeight, UiSize } from '@/constants/ui'
 
 const Header = () => {
@@ -29,18 +30,22 @@ const Header = () => {
 				'fixed left-0 top-0 z-40 h-header-desktop w-full',
 				'flex justify-center border-b',
 				'transition-background duration-500 ease-in-out',
+				'mobile:h-header-mobile',
 				isActive
 					? 'border-achromatic-0 bg-achromatic-0 text-achromatic-900'
 					: 'border-achromatic-500 bg-transparent text-achromatic-100',
 			].join(' ')}>
-			<div className="inner flex h-full w-full max-w-desktop items-center justify-between">
+			<div
+				className={['inner flex h-full w-full max-w-desktop items-center justify-between', 'mobile:px-4'].join(
+					' ',
+				)}>
 				<div className="left flex shrink-0 items-center">
-					<div className="mr-2 w-[54px]">
+					<div className="mr-2 w-[54px] mobile:w-9">
 						<Image src="/images/bi-large.png" width={54} height={54} alt="bi" />
 					</div>
-					<h1 className="head-2">좋아서 하는 청소</h1>
+					<h1 className="head-2 mobile:head-3">좋아서 하는 청소</h1>
 				</div>
-				<div className="right flex items-center">
+				<div className="right flex items-center mobile:hidden">
 					<ul className="menu flex items-center whitespace-nowrap">
 						{Menu.map(item => (
 							<li key={item} className="mr-4">
@@ -52,6 +57,7 @@ const Header = () => {
 						견적 문의하기
 					</ButtonSolid>
 				</div>
+				<MobileMenu />
 			</div>
 		</header>
 	)
